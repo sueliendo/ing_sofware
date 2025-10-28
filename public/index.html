@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istea</title>
+    <link rel="stylesheet" href="/public/css/syles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav>
+            <a href="#hero" class="logo">Istea</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+
+
+    <div class="game-container w-full max-w-md mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-6 text-teal-300">
+            Tic-Tac-Toe
+        </h1>
+
+        <div id="status" class="text-2xl text-center mb-4 h-8 transition-all duration-300">
+            Tu turno (X)
+        </div>
+
+        <!-- Grilla de juego -->
+        <div id="board" class="grid grid-cols-3 gap-2 bg-gray-700 p-2 rounded-lg shadow-2xl">
+            <div data-cell-index="0" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="1" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="2" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="3" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="4" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="5" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="6" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="7" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+            <div data-cell-index="8" class="cell bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition duration-200"></div>
+        </div>
+
+        <button id="restartButton" class="restart-button w-full mt-6 py-3 px-6 text-white text-lg font-semibold rounded-lg shadow-lg">
+            Reiniciar juego
+        </button>
+    </div>
+    </main>
+    </section>
+    <footer>
+        <p>&copy; Pimpampum</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* Basic Reset & Global Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-light: #f4f4f4;
+    --text-color: #333;
+    --header-height: 70px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+/* Header & Navigation */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.content-section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    nav ul {
+        display: none; /* Simple mobile solution, can be replaced with a burger menu */
+    }
+}
+
+
+/*juego*/
+        /* Custom styles for the game */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+        }
+        
+        .game-container {
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* Set a fixed aspect ratio for the board cells */
+        .cell {
+            aspect-ratio: 1 / 1;
+            font-size: 3rem; /* Large X and O */
+            line-height: 1;
+        }
+
+        /* Custom styles for X and O */
+        .cell.x {
+            color: #38b2ac; /* Teal */
+        }
+        
+        .cell.o {
+            color: #f6ad55; /* Orange */
+        }
+
+        /* Custom button style for a game */
+        .restart-button {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(49, 130, 206, 0.75);
+        }
+        
+        .restart-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(49, 130, 206, 0.85);
+        }
