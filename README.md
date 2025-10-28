@@ -1,110 +1,100 @@
-# Modern Node.js Portfolio Landing Page
+Este proyecto es una mini app de juego tictactoe desarrollada con JS para probar docker
 
-This project is a clean, modern, and responsive portfolio landing page built with Node.js and Express. It is designed to be easily containerized with Docker for simple deployment.
-
-## Features
-
--   **Modern Design**: A clean and elegant single-page layout.
--   **Responsive**: Looks great on all devices, from mobile phones to desktops.
--   **Node.js/Express Backend**: A lightweight server to serve the static assets.
--   **Dockerized**: Comes with a `Dockerfile` for easy containerization and deployment.
--   **Optimized**: Uses a multi-stage Docker build for a small and secure production image.
 
 ## Project Structure
 
-```
 /portfolio-landing-page
-|-- public/            # All front-end assets (HTML, CSS, JS)
+|-- public/            # Frontend assets (HTML, CSS, JS)
 |   |-- css/style.css
 |   |-- js/script.js
 |   `-- index.html
-|-- .dockerignore      # Specifies files to ignore in Docker build
-|-- Dockerfile         # Instructions for building the Docker image
-|-- package.json       # Project metadata and dependencies
-|-- README.md          # This file
-`-- server.js          # The Express server
+|-- .dockerignore     
+|-- Dockerfile         # Instrucciones de building para el Docker container
+|-- package.json      
+|-- README.md          
+`-- server.js          # Express server
 ```
 
 ---
 
-## Technical Process & Commands
+## Comandos y proceso tecnico
 
-### Prerequisites
+### Prerequisitos
 
--   [Node.js](https://nodejs.org/) (v18 or later recommended)
+-   [Node.js](https://nodejs.org/)
 -   [Docker](https://www.docker.com/get-started)
 
-### 1. Local Development Setup
+### 1. Configuración de desarrollo local
 
-Follow these steps to run the application on your local machine.
+Pasos para ejecutar la aplicación localmente:
 
-**Step 1: Clone the repository**
+**Step 1: Clonar el repositorio**
 ```bash
-git clone <your-repository-url>
-cd portfolio-landing-page
+git clone https://github.com/sueliendo/ing_sofware.git
+cd ing_sofware
 ```
 
-**Step 2: Install dependencies**
-This command reads the `package.json` file and installs the required `express` package.
+**2: Instalar dependencias**
+Este comando lee el archivo`package.json` e instala el paquete `express` necesario.
 ```bash
 npm install
 ```
 
-**Step 3: Run the application**
-This command executes the `start` script defined in `package.json`, which runs the Node.js server.
+**Step 3: Correr la aplicacion**
+Este comando ejecuta el sript `start` definido en `package.json`, que corre node.js 
 ```bash
 npm start
 ```
 
-Your portfolio will be available at **http://localhost:3000**.
+La app estara disponible en el puerto 3000 por defecto **http://localhost:3000**.
 
 ---
 
-### 2. Running with Docker
+### 2.  Correr con Docker
 
-Using Docker allows you to run the application in a container, ensuring a consistent environment.
+El uso de Docker permite ejecutar la aplicación en un contenedor, garantizando un entorno consistente.
 
-**Step 1: Build the Docker image**
-This command reads the `Dockerfile` and builds a Docker image named `portfolio-app`. The `-t` flag is for "tagging" the image with a name.
+**Step 1: Construir la imagen de docker / Build **
+This command reads the `Dockerfile` and builds a Docker image named `mini-app`. La bandera `-t` sirve para "etiquetar" la imagen con un nombre.
 ```bash
-docker build -t portfolio-app .
+docker build -t entrega-app .
 ```
 
 **Step 2: Run the Docker container**
-This command runs a container from the `portfolio-app` image.
+This command runs a container from the `mini-app` image.
 -   `-d`: Runs the container in detached mode (in the background).
 -   `-p 8080:3000`: Maps port 8080 on your host machine to port 3000 inside the container.
--   `--name my-portfolio`: Assigns a memorable name to the container.
+-   `--name mini-app`: Assigns a memorable name to the container.
 
 ```bash
-docker run -d -p 8080:3000 --name my-portfolio portfolio-app
+docker run -d -p 8080:3000 --name mini-app entrega-app
 ```
 
-Your portfolio is now running in a Docker container and is accessible at **http://localhost:8080**.
+La app ahora se ejecuta en un contenedor Docker y es accesible en **http://localhost:8080**.
 
-### Docker Commands Cheatsheet
+### Lista de comandos Docker 
 
--   **List running containers:**
+-   **Listar containers corriendo:**
     ```bash
     docker ps
     ```
--   **Stop the container:**
+-   **Detener container:**
     ```bash
-    docker stop my-portfolio
+    docker stop mini-app
     ```
--   **Start the container again:**
+-   **Reiniciar el container nuevamente :**
     ```bash
-    docker start my-portfolio
+    docker start mini-app
     ```
--   **View container logs:**
+-   **Ver logs del container:**
     ```bash
-    docker logs my-portfolio
+    docker logs mini-app
     ```
--   **Remove the container (must be stopped first):**
+-   **Remover el container:**
     ```bash
-    docker rm my-portfolio
+    docker rm mini-app
     ```
--   **Remove the Docker image:**
+-   **Remover la imagen de Docker:**
     ```bash
-    docker rmi portfolio-app
+    docker rmi mini-app
     ```
