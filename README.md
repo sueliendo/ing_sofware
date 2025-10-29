@@ -60,11 +60,11 @@ This command reads the `Dockerfile` and builds a Docker image named `mini-app`. 
 docker build -t entrega-app .
 ```
 
-**Step 2: Run the Docker container**
-This command runs a container from the `mini-app` image.
--   `-d`: Runs the container in detached mode (in the background).
--   `-p 8080:3000`: Maps port 8080 on your host machine to port 3000 inside the container.
--   `--name mini-app`: Assigns a memorable name to the container.
+**3. Correr el container de docker**
+Este comando corre el container de la imagen `entrega-app`.
+-   `-d`: Ejecuta el contenedor en modo separado (en segundo plano).
+-   `-p 8080:3000`: Asigna el puerto 8080 de su máquina host al puerto 3000 dentro del contenedor.
+-   `--name mini-app`: Asigna un nombre al contenedor.
 
 ```bash
 docker run -d -p 8080:3000 --name mini-app entrega-app

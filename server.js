@@ -4,10 +4,12 @@ const path =require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the 'public' directory
+// servir archivos estáticos desde el directorio 'público' 'public' 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// A catch-all route to send users to the index.html
+
+
+// Una ruta general para enviar a los usuarios al index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
