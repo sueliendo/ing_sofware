@@ -1,15 +1,15 @@
-Este proyecto es una mini app de juego tictactoe desarrollada con JS para probar docker
+Este proyecto es una mini app de juego tic-tac-toe desarrollada con JS para probar docker
 
 
-## Project Structure
-
-/portfolio-landing-page
-|-- public/            # Frontend assets (HTML, CSS, JS)
-|   |-- css/style.css
-|   |-- js/script.js
+## Estructura
+```
+|-- public/      
+|   |--js/script.js   # Frontend assets (HTML, CSS, JS)
+|.  |--styles.css
 |   `-- index.html
 |-- .dockerignore     
-|-- Dockerfile         # Instrucciones de building para el Docker container
+|-- Dockerfile     
+|-- package-lock.json    # Instrucciones de building para el Docker container
 |-- package.json      
 |-- README.md          
 `-- server.js          # Express server
@@ -69,7 +69,6 @@ Este comando corre el container de la imagen `entrega-app`.
 ```bash
 docker run -d -p 8080:3000 --name mini-app entrega-app
 ```
-
 La app ahora se ejecuta en un contenedor Docker y es accesible en **http://localhost:8080**.
 
 ### Lista de comandos Docker 
